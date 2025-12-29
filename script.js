@@ -101,19 +101,20 @@ forms.forEach(form => {
 });
 
 // ===========================
-// Animación del botón de WhatsApp
+// Botones flotantes siempre visibles
 // ===========================
 const whatsappFloat = document.querySelector('.whatsapp-float');
 if (whatsappFloat) {
-    window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 300) {
-            whatsappFloat.style.opacity = '1';
-            whatsappFloat.style.visibility = 'visible';
-        } else {
-            whatsappFloat.style.opacity = '0';
-            whatsappFloat.style.visibility = 'hidden';
-        }
-    });
+    // Asegurar que el botón de WhatsApp esté siempre visible
+    whatsappFloat.style.opacity = '1';
+    whatsappFloat.style.visibility = 'visible';
+}
+
+const calendarFloat = document.querySelector('.calendar-float');
+if (calendarFloat) {
+    // Asegurar que el botón de agendamiento esté siempre visible
+    calendarFloat.style.opacity = '1';
+    calendarFloat.style.visibility = 'visible';
 }
 
 // ===========================
