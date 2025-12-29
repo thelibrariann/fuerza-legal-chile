@@ -168,7 +168,7 @@ ul {
 .hero {
     height: 100vh;
     min-height: 600px;
-    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%);
+    background: url('../images/banner-fuerza-legal-light.png') center center / cover no-repeat, linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%);
     position: relative;
     display: flex;
     align-items: center;
@@ -378,6 +378,15 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: var(--shadow-xl);
+    object-fit: cover;
 }
 
 .image-placeholder {
