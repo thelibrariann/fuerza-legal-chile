@@ -2,34 +2,37 @@
    Variables CSS
    =========================== */
 :root {
-    /* Colores principales */
-    --primary-color: #1a237e;
-    --primary-dark: #0d1642;
-    --primary-light: #3949ab;
-    --secondary-color: #c62828;
-    --accent-color: #ffd700;
-    
+    /* Colores principales - Paleta inspirada en el logo */
+    --primary-color: #2c3e50;        /* Azul oscuro elegante */
+    --primary-dark: #1a252f;         /* Azul muy oscuro */
+    --primary-light: #34495e;        /* Azul grisáceo */
+    --secondary-color: #8b7355;      /* Marrón/taupe sofisticado */
+    --accent-color: #b8935f;         /* Dorado/bronce del logo */
+    --accent-light: #d4af7a;         /* Dorado claro */
+
     /* Colores de texto */
-    --text-dark: #212121;
-    --text-light: #757575;
+    --text-dark: #2c3e50;            /* Azul oscuro para texto principal */
+    --text-medium: #4a5568;          /* Gris medio */
+    --text-light: #718096;           /* Gris claro */
     --text-white: #ffffff;
-    
+
     /* Colores de fondo */
-    --bg-light: #f5f5f5;
+    --bg-light: #f7f7f5;             /* Beige muy claro */
     --bg-white: #ffffff;
-    --bg-overlay: rgba(26, 35, 126, 0.85);
-    
+    --bg-cream: #faf9f7;             /* Crema suave */
+    --bg-overlay: rgba(44, 62, 80, 0.85);
+
     /* Sombras */
-    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
-    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
-    --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.2);
-    
+    --shadow-sm: 0 2px 4px rgba(44, 62, 80, 0.08);
+    --shadow-md: 0 4px 6px rgba(44, 62, 80, 0.12);
+    --shadow-lg: 0 10px 25px rgba(44, 62, 80, 0.15);
+    --shadow-xl: 0 20px 40px rgba(44, 62, 80, 0.2);
+
     /* Transiciones */
     --transition-fast: 0.2s ease;
     --transition-normal: 0.3s ease;
     --transition-slow: 0.5s ease;
-    
+
     /* Espaciado */
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
@@ -52,10 +55,17 @@ html {
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--text-dark);
-    line-height: 1.6;
+    line-height: 1.7;
     overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--text-dark);
 }
 
 img {
@@ -268,13 +278,16 @@ ul {
 }
 
 .btn-whatsapp {
-    background: #25d366;
+    background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-light) 100%);
     color: white;
     width: 100%;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 600;
 }
 
 .btn-whatsapp i {
@@ -287,18 +300,21 @@ ul {
 }
 
 .btn-whatsapp:hover {
-    background: #1fb855;
-    transform: translateY(-2px);
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(184, 147, 95, 0.4);
 }
 
 .btn-calendar {
-    background: var(--primary-color);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
     color: white;
     width: 100%;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 600;
 }
 
 .btn-calendar i {
@@ -311,8 +327,8 @@ ul {
 }
 
 .btn-calendar:hover {
-    background: var(--primary-dark);
-    transform: translateY(-2px);
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(44, 62, 80, 0.4);
 }
 
 .btn-social {
@@ -454,6 +470,9 @@ ul {
     box-shadow: var(--shadow-md);
     transition: var(--transition-normal);
     position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .service-card:hover {
@@ -531,6 +550,7 @@ ul {
     border-radius: 30px;
     font-weight: 600;
     transition: var(--transition-normal);
+    margin-top: auto;
 }
 
 .service-btn:hover {
@@ -561,6 +581,9 @@ ul {
     text-align: center;
     transition: var(--transition-normal);
     border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .social-card:hover {
@@ -582,27 +605,27 @@ ul {
 }
 
 .instagram-card .social-card-icon {
-    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-light) 100%);
 }
 
 .instagram-card:hover {
-    border-color: #e6683c;
+    border-color: var(--accent-color);
 }
 
 .tiktok-card .social-card-icon {
-    background: #000000;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
 }
 
 .tiktok-card:hover {
-    border-color: #000000;
+    border-color: var(--primary-color);
 }
 
 .youtube-card .social-card-icon {
-    background: #ff0000;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
 }
 
 .youtube-card:hover {
-    border-color: #ff0000;
+    border-color: var(--secondary-color);
 }
 
 .social-card h3 {
@@ -636,6 +659,7 @@ ul {
     transition: var(--transition-normal);
     text-decoration: none;
     width: 100%;
+    margin-top: auto;
 }
 
 .btn-social-card i {
@@ -647,33 +671,33 @@ ul {
 }
 
 .instagram-card .btn-social-card {
-    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-light) 100%);
     color: white !important;
 }
 
 .instagram-card .btn-social-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(230, 104, 60, 0.4);
+    box-shadow: 0 5px 15px rgba(184, 147, 95, 0.4);
 }
 
 .tiktok-card .btn-social-card {
-    background: #000000;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
     color: white !important;
 }
 
 .tiktok-card .btn-social-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 5px 15px rgba(44, 62, 80, 0.4);
 }
 
 .youtube-card .btn-social-card {
-    background: #ff0000;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
     color: white !important;
 }
 
 .youtube-card .btn-social-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.4);
+    box-shadow: 0 5px 15px rgba(139, 115, 85, 0.4);
 }
 
 /* ===========================
@@ -759,11 +783,11 @@ ul {
 }
 
 .whatsapp-card i {
-    color: #25d366;
+    color: var(--accent-color);
 }
 
 .calendar-card i {
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .action-card h3 {
@@ -780,7 +804,7 @@ ul {
    Footer
    =========================== */
 .footer {
-    background: var(--primary-dark);
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%);
     color: var(--text-white);
     padding: var(--spacing-lg) 0 var(--spacing-md);
 }
